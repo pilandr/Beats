@@ -1,0 +1,11 @@
+.pluses {
+  display: flex;
+}
+
+.pluses__item {
+  margin-right: 9px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}

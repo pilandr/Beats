@@ -1,0 +1,11 @@
+.review-section {
+  position: relative;
+
+  &::before {
+    content: url('../img/circle.png');
+    position: absolute;
+    left: 6%;
+    bottom: 0;
+    transform: translateY(50%);
+  }
+}

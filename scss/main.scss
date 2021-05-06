@@ -1,0 +1,28 @@
+
+@import "./variable.scss";
+//normilize
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
+//fonts
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans&family=Play:wght@400;700&display=swap');
+@import  url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css');
+
+@import "../scss/layout.scss";
+@import "../components/hero.scss";
+@import "../components/header.scss";
+@import "../components/menu.scss";
+@import "../components/contacts.scss";
+@import "../components/pluses.scss";
+@import "../components/plus.scss";
+@import "../components/btn.scss";
+@import "../components/section.scss";
+@import "../components/headline.scss";
+@import "../components/benefits.scss";
+@import "../components/benefit.scss";
+@import "../components/benefits-section.scss";
+@import "../components/reviews.scss";
+@import "../components/interactive-avatar.scss";
+@import "../components/review-section.scss";
+@import "../components/order-section.scss";
+@import "../components/form.scss";
+@import "../components/radio.scss";
+@import "../components/fixed-menu.scss";

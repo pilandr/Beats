@@ -1,0 +1,33 @@
+.section {
+  
+  // min-height: 650px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+
+
+  &--font-color--white{
+    color: #fff;
+
+    .section__title {
+      color: inherit;
+    }
+  }
+}
+
+.section__title {
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 1.1;
+  color: #292929;
+  margin-bottom: 45px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+// .section__title--light {
+//   color: #FFFFFF;
+
+// }

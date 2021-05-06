@@ -1,0 +1,46 @@
+.fixed-menu {
+  position: fixed;
+  top: 34%;
+  right: 5%;
+  z-index: $z-fixed-menu;
+}
+
+.fixed-menu__list {
+}
+.fixed-menu__item {
+  margin-bottom: 5px;
+
+  &--active {
+    .fixed-menu__link {
+      border-color: #E01F3D;
+
+      &::before {
+        background: #E01F3D;
+      }
+    }
+  }
+}
+.fixed-menu__link {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  display: block;
+  position: relative;
+  
+
+  &::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    background: rgba(29,29,29,0.6);
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+
+  }
+}
