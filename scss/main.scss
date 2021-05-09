@@ -1,5 +1,6 @@
 
 @import "./variable.scss";
+@import "./media.scss";
 //normilize
 @import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
 //fonts
@@ -11,6 +12,7 @@
 @import "../components/header.scss";
 @import "../components/menu.scss";
 @import "../components/contacts.scss";
+@import "../components/hamburger.scss";
 @import "../components/pluses.scss";
 @import "../components/plus.scss";
 @import "../components/btn.scss";
@@ -26,3 +28,7 @@
 @import "../components/form.scss";
 @import "../components/radio.scss";
 @import "../components/fixed-menu.scss";
+@import "../components/map.scss";
+@import "../components/footer.scss";
+@import "../components/socials.scss";
+

@@ -2,7 +2,7 @@
   
   background-color: #F5F5F5;
   height: 100vh;
-  min-height: 650px;
+  min-height: rem(650px);
   color: #292929;
   position: relative;
 
@@ -10,7 +10,7 @@
     content: url(../img/Rectangle.png);
     display: block;
     position: absolute;
-    bottom: -24px;
+    bottom: rem(-24px);
     right: 11%;
   }
 }
@@ -20,42 +20,86 @@
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  width: 915px;
+  width: 94.5%;
+  max-width: rem(915px);
   margin: 0 auto;
-  padding: 24px 0 65px 0;
-  // background: url('../img/product__img.png') right center / 50% auto no-repeat;
+  padding: rem(24px) 0 rem(65px) 0;
+  background: url('../img/product__img.png') right center / 50% auto no-repeat;
+
+  @include tablets {
+   background: none; 
+  }
 }
 
 .hero__title-section {
-  //width: 45%;
-  display: flex;
-  padding-top: 60px;
-}
+  width: 45%;
 
-.hero__title {
-  width: 46%;
-}
+  @include tablets {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 rem(50px);
 
-.hero__img {
-  position: relative;
-  top: -10%;
-  right: 0;
+    &::before {
+      content: "";
+      width: rem(323px);
+      height: rem(323px);
+      background: url('../img/product__img.png') center center / contain no-repeat;
+      margin-bottom: rem(67px);
+    }
+  }
+
+  @include phones {
+
+    &::before {
+      margin-bottom: rem(50px);
+    }
+  }
 }
 
 .hero__main-title {
   font-weight: bold;
-  font-size: 48px;
+  font-size: rem(48px);
   line-height: 1.1;
-  margin-bottom: 22px;
+  margin-bottom: rem(22px);
   text-transform: uppercase;
+
+  @include tablets {
+    margin-bottom: rem(8px);
+  }
+
+  @include phones {
+    font-size: rem(40px);
+    margin-bottom: rem(18px);
+  }
 }
 
 .hero__title-desc {
   font-family: "Alegreya Sans";
-  font-size: 21px;
+  font-size: rem(21px);
   line-height: 1.1;
-  margin-bottom: 54px;
-  padding-right: 80px;
+  margin-bottom: rem(54px);
+  padding-right: rem(80px);
+
+  @include tablets {
+    padding: 0 20%;
+    margin-bottom: rem(32px);
+  }
+
+  @include phones {
+    padding: 0 7%;
+
+  }
+}
+
+.hero__pluses {
+  @include tablets {
+   display: none; 
+  }
 }
 
 

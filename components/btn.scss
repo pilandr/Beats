@@ -1,10 +1,10 @@
 .btn {
-  padding: 18px 41px;
-  border-radius: 100px;
+  padding: rem(18px) rem(41px);
+  border-radius: rem(100px);
   color: #FFFFFF;
   background: #E01F3D;
   text-transform: uppercase;
-  font-size: 16px;
+  font-size: rem(16px);
   font-weight: bold;
   border: none;
   cursor: pointer;
@@ -27,16 +27,37 @@
 
   &--theme--red-dark{
     background: #CA1B36;
-    padding: 20px 41px;
+    padding: rem(20px) rem(41px);
     
     &:hover {
       background: #E01F3D;
     }
+
+  }
+
+  @include tablets {
+    
+    &--theme--red-dark{
+      padding: rem(20px) rem(43px);
+    }
+
+    &--theme--transparent{
+      color: #E01F3D;
+    }
+  }
+
+  @include phones {
+    font-size: rem(22px);
+
+    &--theme--red-dark{
+      font-size: rem(18px);
+      
+    }
+
+    &--theme--transparent{
+      font-size: rem(18px);
+    }
   }
   
-  
-  
- 
-
 
 }

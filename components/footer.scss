@@ -1,0 +1,15 @@
+.footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #FFFFFF;
+  padding: rem(20px) rem(54px) rem(20px) rem(86px);
+  display: flex;
+  justify-content: space-between;
+
+  @include phones {
+    flex-direction: column;
+    align-items: center;
+  }
+}
