@@ -17,12 +17,12 @@
     align-items: center;
     justify-content: center;
     color: #fff;
-    font-size: 36px;
+    font-size: rem(36px);
     font-family: 'Play', sans-serif;
   }
   & .menu__item {
     margin: 0;
-    margin-bottom: 20px;
+    margin-bottom: rem(20px);
   }
 
 

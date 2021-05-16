@@ -3,8 +3,8 @@
 }
 
 .product-slider__arrow {
-  width: 24px;
-  height: 50px;
+  width: rem(24px);
+  height: rem(50px);
 }
 
 
@@ -12,6 +12,16 @@
   position: absolute;
   top: 52%;
   left: 4%;
+
+  @include tablets {
+    top: 24%;
+    left: 17%;
+  }
+
+  @include phones {
+    top: 20%;
+    left: -2%;
+  }
 }
 
 .product-slider__arrow--direction--next {
@@ -19,5 +29,15 @@
   top: 52%;
   left: 94%;
   transform: translateX(-100%);
+
+  @include tablets {
+    top: 24%;
+    left: 82%;
+  }
+
+  @include phones {
+    top: 20%;
+    left: 103%;
+  }
 }
 

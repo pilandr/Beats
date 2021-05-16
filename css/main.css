@@ -1,19 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans&family=Play:wght@400;700&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css");
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: #313131;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 10000;
-}
-
 html {
   font-size: 16px;
 }
@@ -78,6 +65,7 @@ img {
   width: 100%;
   min-height: 100%;
   overflow: hidden;
+  position: relative;
 }
 
 .container {
@@ -230,12 +218,12 @@ img {
   align-items: center;
   justify-content: center;
   color: #fff;
-  font-size: 36px;
+  font-size: 2.25rem;
   font-family: "Play", sans-serif;
 }
 .menu--vertical .menu__item {
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 @media screen and (max-width: 768px) {
   .menu--vertical {
@@ -615,8 +603,8 @@ img {
 }
 
 .product-slider__arrow {
-  width: 24px;
-  height: 50px;
+  width: 1.5rem;
+  height: 3.125rem;
 }
 
 .product-slider__arrow--direction--prev {
@@ -624,12 +612,36 @@ img {
   top: 52%;
   left: 4%;
 }
+@media screen and (max-width: 768px) {
+  .product-slider__arrow--direction--prev {
+    top: 24%;
+    left: 17%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .product-slider__arrow--direction--prev {
+    top: 20%;
+    left: -2%;
+  }
+}
 
 .product-slider__arrow--direction--next {
   position: absolute;
   top: 52%;
   left: 94%;
   transform: translateX(-100%);
+}
+@media screen and (max-width: 768px) {
+  .product-slider__arrow--direction--next {
+    top: 24%;
+    left: 82%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .product-slider__arrow--direction--next {
+    top: 20%;
+    left: 103%;
+  }
 }
 
 .products {
@@ -642,6 +654,14 @@ img {
   align-items: center;
   padding-left: 6.25rem;
 }
+@media screen and (max-width: 768px) {
+  .product__container {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0;
+  }
+}
 
 .product__col {
   margin-right: 0.9375rem;
@@ -650,11 +670,34 @@ img {
 .product__col:last-child {
   margin-right: 0;
 }
+@media screen and (max-width: 768px) {
+  .product__col {
+    width: 100%;
+    margin: 0 0 1.25rem 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .product__col {
+    margin: 0;
+  }
+}
 
 .product__img {
   width: 100%;
   position: relative;
   top: 1.5625rem;
+}
+@media screen and (max-width: 768px) {
+  .product__img {
+    top: 0;
+    width: 43%;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 480px) {
+  .product__img {
+    width: 70%;
+  }
 }
 
 .product__description {
@@ -667,6 +710,11 @@ img {
 .product__description:hover .product__desc-full {
   left: 100%;
 }
+@media screen and (max-width: 768px) {
+  .product__description {
+    display: none;
+  }
+}
 
 .product__description-pic {
   display: block;
@@ -677,15 +725,15 @@ img {
   box-shadow: 4px 4px 40px rgba(0, 0, 0, 0.06);
   -webkit-backdrop-filter: blur(40px);
           backdrop-filter: blur(40px);
-  border-radius: 4px;
+  border-radius: 0.25rem;
   position: absolute;
   top: 0;
-  left: -999999px;
+  left: -62499.9375rem;
   color: #000000;
-  width: 273px;
-  height: 294px;
-  padding: 28px 25px 34px 30px;
-  font-size: 16px;
+  width: 17.0625rem;
+  height: 18.375rem;
+  padding: 1.75rem 1.5625rem 2.125rem 1.875rem;
+  font-size: 1rem;
   color: #000000;
 }
 
@@ -698,13 +746,13 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 29px;
+  margin-bottom: 1.8125rem;
 }
 
 .product__desc-item-ico {
   width: 1.5rem;
   height: 1.5rem;
-  margin-right: 12px;
+  margin-right: 0.75rem;
 }
 
 .product__desc-item-text {
@@ -713,10 +761,23 @@ img {
 
 .product__title {
   font-weight: bold;
-  font-size: 36px;
+  font-size: 2.25rem;
   text-transform: uppercase;
   margin-bottom: 1.5rem;
   line-height: 1.16;
+}
+@media screen and (max-width: 768px) {
+  .product__title {
+    font-size: 1.875rem;
+    padding-top: 2.0625rem;
+    text-align: center;
+    margin-bottom: 0.9375rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .product__title {
+    padding: 1.5625rem 1.25rem 0 1.25rem;
+  }
 }
 
 .product__text {
@@ -725,26 +786,43 @@ img {
   padding-right: 29%;
   color: #666666;
 }
+@media screen and (max-width: 768px) {
+  .product__text {
+    padding: 0 4.0625rem;
+    text-align: center;
+    margin-bottom: 1.3125rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .product__text {
+    padding: 0 2.5625rem;
+  }
+}
 
 .product__info {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 1.5rem;
 }
+@media screen and (max-width: 768px) {
+  .product__info {
+    justify-content: center;
+    padding-left: 3.5rem;
+  }
+}
 
 .product__info-col {
   flex-basis: 9.375rem;
 }
-
 .product__info-up {
   font-weight: normal;
-  font-size: 16px;
+  font-size: 1rem;
   color: #666666;
 }
 
 .product__info-down {
   font-weight: bold;
-  font-size: 18px;
+  font-size: 1.125rem;
   color: #000000;
 }
 
@@ -752,12 +830,31 @@ img {
   display: flex;
   flex-wrap: wrap;
 }
+@media screen and (max-width: 768px) {
+  .product__value {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .product__value-col {
+    margin-right: 2.5rem;
+  }
+  .product__value-col:last-child {
+    margin-right: 0;
+  }
+}
 
 .product__price {
   flex-basis: 10.125rem;
   font-weight: normal;
-  font-size: 36px;
+  font-size: 2.25rem;
   color: #151515;
+}
+@media screen and (max-width: 768px) {
+  .product__price {
+    font-size: 2.5rem;
+  }
 }
 
 .reviews__display {
@@ -1176,15 +1273,29 @@ img {
   height: 1.875rem;
 }
 
-.hamburger-menu__link {
-  width: 20px;
-  height: 20px;
+.hamburger-menu {
   position: absolute;
-  top: 42px;
-  right: 42px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #313131;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  display: none;
+}
+
+.hamburger-menu__link {
+  width: 1.25rem;
+  height: 1.25rem;
+  position: absolute;
+  top: 2.625rem;
+  right: 2.625rem;
 }
 
 .hamburger-menu__ico {
-  width: 20px;
-  height: 20px;
+  width: 1.25rem;
+  height: 1.25rem;
 }

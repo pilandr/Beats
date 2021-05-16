@@ -1,13 +1,28 @@
+.hamburger-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #313131;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    display: none;
+}
+
+
 .hamburger-menu__link {
-  width: 20px;
-  height: 20px;
+  width: rem(20px);
+  height: rem(20px);
   position: absolute;
-  top: 42px;
-  right: 42px;
+  top: rem(42px);
+  right: rem(42px);
 }
 
 .hamburger-menu__ico {
-  width: 20px;
-  height: 20px;
+  width: rem(20px);
+  height: rem(20px);
 }
 

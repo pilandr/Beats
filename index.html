@@ -230,8 +230,8 @@
                     </div>
                   </div>
                   <div class="product__value">
-                    <div class="product__price">14 990 ₽</div>
-                    <a href="#" class="btn">Заказать</a>
+                    <div class="product__price product__value-col">14 990 ₽</div>
+                    <a href="#" class="btn product__value-col">Заказать</a>
                   </div>
                 </div>
               </div>
@@ -241,7 +241,7 @@
       </div>
 
     </section>
-    <section class="section review-section">
+    <section class="section review-section" id = "review">
       <div class="container">
         <h2 class="section__title">Отзывы</h2>
         <div class="reviews">
@@ -408,7 +408,7 @@
           </ul>
       </footer>
     </div>
-
+    
   </div>
 
   <nav class="fixed-menu">
@@ -425,25 +425,43 @@
     </ul>
   </nav>
 
-  <script type="html/template" id="hamburger-menu">
-    <a href="#" class="hamburger-menu__link">
-      <svg class="hamburger-menu__ico">
-        <use xlink:href="./img/sprite.svg#gamburger_close"></use>
-      </svg>
-    </a>
-      <nav class="menu menu--vertical">
-        <ul class="menu__list">
-        <li class="menu__item"><a href="#" class="menu__link">О нас</a></li>
-        <li class="menu__item"><a href="#" class="menu__link">Наушники</a></li>
-        <li class="menu__item"><a href="#" class="menu__link">Команда</a></li>
-        <li class="menu__item"><a href="#" class="menu__link">Цвета</a></li>
-        <li class="menu__item"><a href="#" class="menu__link">Отзывы</a></li>
-        <li class="menu__item"><a href="#" class="menu__link">Как мы работаем</a></li>
-        <li class="menu__item"><a href="#" class="menu__link">Контакты </a></li>
-      </ul>
-      </nav>
-  </script>
-  <script >
+  <div id="hamburger-menu" class="hamburger-menu">
+      <a href="#" class="hamburger-menu__link">
+        <svg class="hamburger-menu__ico">
+          <use xlink:href="./img/sprite.svg#gamburger_close"></use>
+        </svg>
+      </a>
+        <nav class="menu menu--vertical">
+          <ul class="menu__list">
+          <li class="menu__item"><a href="#" class="menu__link">О нас</a></li>
+          <li class="menu__item"><a href="#" class="menu__link">Наушники</a></li>
+          <li class="menu__item"><a href="#" class="menu__link">Команда</a></li>
+          <li class="menu__item"><a href="#" class="menu__link">Цвета</a></li>
+          <li class="menu__item"><a href="#review" class="menu__link">Отзывы</a></li>
+          <li class="menu__item"><a href="#" class="menu__link">Как мы работаем</a></li>
+          <li class="menu__item"><a href="#" class="menu__link">Контакты </a></li>
+        </ul>
+        </nav>
+    </div>
+    <!-- <script type="html/template" id="hamburger-menu">
+      <a href="#" class="hamburger-menu__link">
+        <svg class="hamburger-menu__ico">
+          <use xlink:href="./img/sprite.svg#gamburger_close"></use>
+        </svg>
+      </a>
+        <nav class="menu menu--vertical">
+          <ul class="menu__list">
+          <li class="menu__item"><a href="#" class="menu__link">О нас</a></li>
+          <li class="menu__item"><a href="#" class="menu__link">Наушники</a></li>
+          <li class="menu__item"><a href="#" class="menu__link">Команда</a></li>
+          <li class="menu__item"><a href="#" class="menu__link">Цвета</a></li>
+          <li class="menu__item"><a href="#" class="menu__link">Отзывы</a></li>
+          <li class="menu__item"><a href="#" class="menu__link">Как мы работаем</a></li>
+          <li class="menu__item"><a href="#" class="menu__link">Контакты </a></li>
+        </ul>
+        </nav>
+    </script> -->
+  <!-- <script >
     const openHamburgerBtn = document.querySelector(".hamburger");
     const modalWindow = createModal();
     const body = document.body;
@@ -473,6 +491,34 @@
       });
       return overlayElement;
     }
+  </script> -->
+  <script>
+    const wrapperBlock = document.querySelector(".wrapper");
+    const hamburgerMenu = document.querySelector(".hamburger-menu");
+    const openHamburgerBtn = document.querySelector(".hamburger");
+
+    openHamburgerBtn.addEventListener('click', e => {
+      hamburgerMenu.style.display = 'block';
+      wrapperBlock.style.display = 'none';
+
+      const closeHamburgerMenu = hamburgerMenu.querySelector(".hamburger-menu__link");
+      closeHamburgerMenu.addEventListener('click', e => {
+        e.preventDefault();
+        wrapperBlock.style.display = 'block';
+        hamburgerMenu.style.display = 'none';
+      });
+
+      const clickOnMenuItem = hamburgerMenu.querySelector(".menu__list");
+      clickOnMenuItem.addEventListener("click", e => {
+        if (e.target.classList.contains("menu__link")){
+          hamburgerMenu.style.display = 'none';
+          wrapperBlock.style.display = 'block';
+        };
+      });
+    });
+
+    
+
   </script>
 </body>
 </html>
