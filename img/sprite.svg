@@ -136,7 +136,7 @@
     <path d="M2.81415 12.1908H9.65442V13.597H2.81415V12.1908Z" fill="black"/>
   </symbol>
   <symbol id = "arrow_prev" viewBox="0 0 15 29">
-    <path d="M14 28L1.91422 15.9142C1.13317 15.1332 1.13317 13.8668 1.91421 13.0858L14 1" />
+    <path d="M14 28L1.91422 15.9142C1.13317 15.1332 1.13317 13.8668 1.91421 13.0858L14 1" stroke="black" stroke-width="2" stroke-linecap="round"/>
   </symbol>
   <symbol id = "arrow_next" viewBox="0 0 15 29">
     <path d="M5 6L17.0858 18.0858C17.8668 18.8668 17.8668 20.1332 17.0858 20.9142L5 33"/>
