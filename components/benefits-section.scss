@@ -1,11 +1,21 @@
 .benefits-section {
   position: relative;
 
+  // @include tablets {
+  //   min-height: rem(1000px); 
+  // }
+
+  //  @include phones {
+  //   //  height: auto;
+  //   min-height: 100vh; 
+  // }
+
   &::before {
     content: url('../img/triangle.png');
     position: absolute;
     left: 5%;
     bottom: 0;
     transform: translateY(50%);
+    z-index: 2;
   }
 }

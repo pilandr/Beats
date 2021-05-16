@@ -1,0 +1,123 @@
+.product {
+  
+}
+.product__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: rem(100px);
+}
+.product__col {
+  margin-right: rem(60px);
+
+  &:last-child {
+    margin-right: 0;
+  }
+  
+}
+.product__img {
+  width: rem(452px);
+  height: rem(452px);
+  position: relative;
+  top: rem(22px);
+}
+.product__pic {
+}
+.product__description {
+  margin-bottom: rem(25px);
+  width: rem(91px);
+  height: rem(91px);
+  cursor: pointer;
+  position: relative;
+
+  &:hover .product__desc-full{
+    left: 100%;
+  }
+
+}
+.product__description-pic {
+  display: block;
+  
+}
+
+.product__desc-full {
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 4px 4px 40px rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(40px);
+  border-radius: 4px;
+  position: absolute;
+  top: 0;
+  left: -999999px;
+  color: #000000;
+  width: 273px;
+  height: 294px;
+  padding: 28px 25px 34px 30px;
+  font-size: 16px;
+  color: #000000;
+}
+
+.product__desc-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.product__desc-item-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 29px;
+}
+
+.product__desc-item-ico {
+  width: rem(24px);
+  height: rem(24px);
+  margin-right: 12px;
+}
+
+.product__desc-item-text {
+  flex: 1;
+}
+
+.product__title {
+  font-weight: bold;
+  font-size: 36px;
+  text-transform: uppercase;
+  margin-bottom: rem(24px);
+  line-height: 1.16;
+}
+.product__text {
+  margin-bottom: rem(14px);
+  font-size: rem(16px);
+  padding-right: 29%;
+  color: #666666;
+}
+.product__info {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: rem(24px);
+}
+.product__info-col {
+  flex-basis: rem(150px);
+}
+.product__info-up {
+  font-weight: normal;
+  font-size: 16px;
+  color: #666666;
+}
+.product__info-down {
+  font-weight: bold;
+  font-size: 18px;
+  color: #000000;
+}
+
+.product__value {
+  display: flex;
+  flex-wrap: wrap;
+}
+.product__price {
+  flex-basis: rem(162px);
+  font-weight: normal;
+  font-size: 36px;
+  color: #151515;
+
+}

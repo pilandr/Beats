@@ -1,0 +1,12 @@
+.product-section {
+  background: #F8FAF9;
+  position: relative;
+
+  &:before {
+    content: url(../img/square.png);
+    display: block;
+    position: absolute;
+    bottom: rem(-21px);
+    right: 6%;
+  }
+}

@@ -9,23 +9,21 @@
 </head>
 <body>
   <div class="wrapper">
-  
-
-      <section class="hero">
+    <section class="hero">
         <div class="container hero__container">
           <header class="header">
             <img src="img/logo.png" alt="logo" class="logo">
             <nav class="menu">
               <ul class="menu__list">
-                <li class="menu__item"><a href="#" class="menu__link">О нас</a></li>
-                <li class="menu__item"><a href="#" class="menu__link">Наушники</a></li>
+              <li class="menu__item"><a href="#" class="menu__link">О нас</a></li>
+              <li class="menu__item"><a href="#" class="menu__link">Наушники</a></li>
               <li class="menu__item"><a href="#" class="menu__link">Команда</a></li>
               <li class="menu__item"><a href="#" class="menu__link">Цвета</a></li>
               <li class="menu__item"><a href="#" class="menu__link">Отзывы</a></li>
               <li class="menu__item"><a href="#" class="menu__link">Как мы работаем</a></li>
               <li class="menu__item"><a href="#" class="menu__link">Контакты </a></li>
             </ul>
-          </nav>
+            </nav>
           <address class="contacts header__contacts">
             <a href="tel:+88009039090" class="contacts__phone">
               <span class="contacts__phone-icon">
@@ -148,7 +146,101 @@
           </li>
         </ul>
     </div>
-        </section>
+    </section>
+    <section class="section product-section">
+      <div class="container">
+        <div class="product-slider">
+          <a href="#" class="product-slider__arrow product-slider__arrow--direction--prev">
+            <
+          </a>
+          <a href="#" class="product-slider__arrow product-slider__arrow--direction--next">
+            >
+          </a>
+          <ul class="products">
+            <li class="products__item product">
+              <div class="product__container">
+                <div class="product__col">
+                  <div class="product__img">
+                    <img src="./img/product1.png" alt=" product img" class="product__pic">
+                  </div>
+                </div>
+                <div class="product__col">
+                  <div class="product__description">
+                    <img src="./img/description.jpg" alt="description" class="product__description-pic">
+                    <div class="product__desc-full">
+                      <ul class="product__desc-list">
+                        <li class="product__desc-item">
+                          <div class="product__desc-item-row">
+                            <svg class="product__desc-item-ico">
+                              <use xlink:href="./img/sprite.svg#product_ico1"></use>
+                            </svg>
+                            <div class="product__desc-item-text">Bluetooth</div>
+                            <div class="product__desc-item-value">4.0</div>
+                          </div>
+                        </li>
+                        <li class="product__desc-item">
+                          <div class="product__desc-item-row">
+                            <svg class="product__desc-item-ico">
+                              <use xlink:href="./img/sprite.svg#product_ico2"></use>
+                            </svg>
+                            <div class="product__desc-item-text">Дальность</div>
+                            <div class="product__desc-item-value">12 м</div>
+                          </div>
+                        </li>
+                        <li class="product__desc-item">
+                          <div class="product__desc-item-row">
+                            <svg class="product__desc-item-ico">
+                              <use xlink:href="./img/sprite.svg#product_ico3"></use>
+                            </svg>
+                            <div class="product__desc-item-text">Зарядка</div>
+                            <div class="product__desc-item-value">3 ч</div>
+                          </div>
+                        </li>
+                        <li class="product__desc-item">
+                          <div class="product__desc-item-row">
+                            <svg class="product__desc-item-ico">
+                              <use xlink:href="./img/sprite.svg#product_ico4"></use>
+                            </svg>
+                            <div class="product__desc-item-text">Вес</div>
+                            <div class="product__desc-item-value">215гр</div>
+                          </div>
+                        </li>
+                        <li class="product__desc-item">
+                          <div class="product__desc-item-row">
+                            <svg class="product__desc-item-ico">
+                              <use xlink:href="./img/sprite.svg#product_ico5"></use>
+                            </svg>
+                            <div class="product__desc-item-text">Гарантия</div>
+                            <div class="product__desc-item-value">1 год</div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="product__title">beats solo 3. цвет «атласное серебро»</div>
+                  <div class="product__text">Беспроводные наушники Beats Solo3 готовы к работе в любой момент. Включите их и поднесите к своему iPhone — они мгновенно подключатся к нему.</div>
+                  <div class="product__info">
+                    <div class="product__info-col">
+                      <div class="product__info-up">Зарядка</div>
+                      <div class="product__info-down">2  часа</div>
+                    </div>
+                    <div class="product__info-col">
+                      <div class="product__info-up">Вес</div>
+                      <div class="product__info-down">215 грамм</div>
+                    </div>
+                  </div>
+                  <div class="product__value">
+                    <div class="product__price">14 990 ₽</div>
+                    <a href="#" class="btn">Заказать</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </section>
     <section class="section review-section">
       <div class="container">
         <h2 class="section__title">Отзывы</h2>
@@ -267,54 +359,55 @@
         </form>
       </div>
     </section>
-        <div class="map">
-          <img src="./img/map.png" alt="map" class="map__img">
-          <footer class="footer">
-              <address class="contacts footer__contacts">
-                <div class="contacts__address">Москва, ул.Новый Арбат, д.31/12</div>
-                <a href="tel:+88009039090" class="contacts__phone">
-                  <span class="contacts__phone-icon">
-                    <!-- <img src="./img/contacts__phone.png" alt="phone pic" class="contacts__phone-icon-pic"> -->
-                    <svg class="contacts__phone-icon-pic" viewBox="0 0 24 24">
-                      <use xlink:href="./img/sprite.svg#phone"></use>
-                    </svg>
-                  </span>
-                  <span class="contacts__phone-text">8 800 903 90 90</span>
-                </a>
-              </address>
-              <ul class="socials">
-                <li class="socials__item">
-                  <a href="#" class="socials__link">
-                    <svg class="social__svg" viewBox="0 0 30 30">
-                      <use xlink:href="./img/sprite.svg#vk"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="socials__item">
-                  <a href="#" class="socials__link">
-                    <svg class="social__svg" viewBox="0 0 30 30">
-                      <use xlink:href="./img/sprite.svg#fb"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="socials__item">
-                  <a href="#" class="socials__link">
-                    <svg class="social__svg" viewBox="0 0 30 30">
-                      <use xlink:href="./img/sprite.svg#in"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="socials__item">
-                  <a href="#" class="socials__link">
-                    <svg class="social__svg" viewBox="0 0 30 30">
-                      <use xlink:href="./img/sprite.svg#tm"></use>
-                    </svg>
-                  </a>
-                </li>
-                
-              </ul>
-          </footer>
-        </div>
+    <div class="map">
+      <img src="./img/map.png" alt="map" class="map__img">
+      <footer class="footer">
+          <address class="contacts footer__contacts">
+            <div class="contacts__address">Москва, ул.Новый Арбат, д.31/12</div>
+            <a href="tel:+88009039090" class="contacts__phone">
+              <span class="contacts__phone-icon">
+                <!-- <img src="./img/contacts__phone.png" alt="phone pic" class="contacts__phone-icon-pic"> -->
+
+                <svg class="contacts__phone-icon-pic" viewBox="0 0 24 24">
+                  <use xlink:href="./img/sprite.svg#phone"></use>
+                </svg>
+              </span>
+              <span class="contacts__phone-text">8 800 903 90 90</span>
+            </a>
+          </address>
+          <ul class="socials">
+            <li class="socials__item">
+              <a href="#" class="socials__link">
+                <svg class="social__svg" viewBox="0 0 30 30">
+                  <use xlink:href="./img/sprite.svg#vk"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="socials__item">
+              <a href="#" class="socials__link">
+                <svg class="social__svg" viewBox="0 0 30 30">
+                  <use xlink:href="./img/sprite.svg#fb"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="socials__item">
+              <a href="#" class="socials__link">
+                <svg class="social__svg" viewBox="0 0 30 30">
+                  <use xlink:href="./img/sprite.svg#in"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="socials__item">
+              <a href="#" class="socials__link">
+                <svg class="social__svg" viewBox="0 0 30 30">
+                  <use xlink:href="./img/sprite.svg#tm"></use>
+                </svg>
+              </a>
+            </li>
+            
+          </ul>
+      </footer>
+    </div>
 
   </div>
 
@@ -331,5 +424,56 @@
       <li class="fixed-menu__item"><a href="#" class="fixed-menu__link"></a></li>
     </ul>
   </nav>
+
+  <script type="html/template" id="hamburger-menu">
+    <a href="#" class="hamburger-menu__link">
+      <svg class="hamburger-menu__ico">
+        <use xlink:href="./img/sprite.svg#gamburger_close"></use>
+      </svg>
+    </a>
+
+      <nav class="menu menu--vertical">
+        <ul class="menu__list">
+        <li class="menu__item"><a href="#" class="menu__link">О нас</a></li>
+        <li class="menu__item"><a href="#" class="menu__link">Наушники</a></li>
+        <li class="menu__item"><a href="#" class="menu__link">Команда</a></li>
+        <li class="menu__item"><a href="#" class="menu__link">Цвета</a></li>
+        <li class="menu__item"><a href="#" class="menu__link">Отзывы</a></li>
+        <li class="menu__item"><a href="#" class="menu__link">Как мы работаем</a></li>
+        <li class="menu__item"><a href="#" class="menu__link">Контакты </a></li>
+      </ul>
+      </nav>
+  </script>
+  <script >
+    const openHamburgerBtn = document.querySelector(".hamburger");
+    const modalWindow = createModal();
+    const body = document.body;
+
+    openHamburgerBtn.addEventListener('click', e => {
+    body.appendChild(modalWindow);
+    });
+
+    function createModal(content) {
+      const overlayElement = document.createElement("div");
+      overlayElement.classList.add("overlay");
+
+      const template = document.querySelector("#hamburger-menu");
+      overlayElement.innerHTML = template.innerHTML;
+      
+      const closeEleement = overlayElement.querySelector(".hamburger-menu__link");
+      closeEleement.addEventListener("click", e => {
+        e.preventDefault();
+        body.removeChild(overlayElement);
+      });
+
+      const closeEleementMenu = overlayElement.querySelector(".menu__list");
+      closeEleementMenu.addEventListener("click", e => {
+        if (e.target.classList.contains("menu__link")){
+          body.removeChild(overlayElement);
+        }
+      });
+      return overlayElement;
+    }
+  </script>
 </body>
 </html>

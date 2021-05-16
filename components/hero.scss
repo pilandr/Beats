@@ -1,10 +1,20 @@
 .hero {
   
   background-color: #F5F5F5;
-  height: 100vh;
   min-height: rem(650px);
+  height: 100vh;
+  // min-height: rem(650px);
   color: #292929;
   position: relative;
+
+  // @include tablets {
+  //   min-height: rem(1000px); 
+  //  }
+
+   @include phones {
+    // height: auto;
+    min-height: rem(800px); 
+    }
 
   &:before {
     content: url(../img/Rectangle.png);
@@ -29,6 +39,8 @@
   @include tablets {
    background: none; 
   }
+
+  
 }
 
 .hero__title-section {

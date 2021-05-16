@@ -1,6 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans&family=Play:wght@400;700&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css");
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #313131;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
 html {
   font-size: 16px;
 }
@@ -76,10 +89,15 @@ img {
 
 .hero {
   background-color: #F5F5F5;
-  height: 100vh;
   min-height: 40.625rem;
+  height: 100vh;
   color: #292929;
   position: relative;
+}
+@media screen and (max-width: 480px) {
+  .hero {
+    min-height: 50rem;
+  }
 }
 .hero:before {
   content: url(../img/Rectangle.png);
@@ -201,6 +219,30 @@ img {
   }
 }
 
+.menu--vertical {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.menu--vertical .menu__list {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 36px;
+  font-family: "Play", sans-serif;
+}
+.menu--vertical .menu__item {
+  margin: 0;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 768px) {
+  .menu--vertical {
+    display: block;
+  }
+}
+
 .menu__list {
   display: flex;
   flex-wrap: wrap;
@@ -265,22 +307,12 @@ img {
 .hamburger {
   width: 26px;
   height: 24px;
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: space-between;
   display: none;
 }
 @media screen and (max-width: 768px) {
   .hamburger {
     display: inline-flex;
   }
-}
-
-.hamburger__plank {
-  display: block;
-  background: #292929;
-  height: 4px;
-  border-radius: 10px;
 }
 
 .hamburger__ico {
@@ -563,6 +595,164 @@ img {
   left: 5%;
   bottom: 0;
   transform: translateY(50%);
+  z-index: 2;
+}
+
+.product-section {
+  background: #F8FAF9;
+  position: relative;
+}
+.product-section:before {
+  content: url(../img/square.png);
+  display: block;
+  position: absolute;
+  bottom: -1.3125rem;
+  right: 6%;
+}
+
+.product-slider {
+  position: relative;
+}
+
+.product-slider__arrow--direction--prev {
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+
+.product-slider__arrow--direction--next {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translateX(-100%);
+}
+
+.products {
+  display: flex;
+}
+
+.product__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 6.25rem;
+}
+
+.product__col {
+  margin-right: 3.75rem;
+}
+.product__col:last-child {
+  margin-right: 0;
+}
+
+.product__img {
+  width: 28.25rem;
+  height: 28.25rem;
+  position: relative;
+  top: 1.375rem;
+}
+
+.product__description {
+  margin-bottom: 1.5625rem;
+  width: 5.6875rem;
+  height: 5.6875rem;
+  cursor: pointer;
+  position: relative;
+}
+.product__description:hover .product__desc-full {
+  left: 100%;
+}
+
+.product__description-pic {
+  display: block;
+}
+
+.product__desc-full {
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 4px 4px 40px rgba(0, 0, 0, 0.06);
+  -webkit-backdrop-filter: blur(40px);
+          backdrop-filter: blur(40px);
+  border-radius: 4px;
+  position: absolute;
+  top: 0;
+  left: -999999px;
+  color: #000000;
+  width: 273px;
+  height: 294px;
+  padding: 28px 25px 34px 30px;
+  font-size: 16px;
+  color: #000000;
+}
+
+.product__desc-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.product__desc-item-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 29px;
+}
+
+.product__desc-item-ico {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 12px;
+}
+
+.product__desc-item-text {
+  flex: 1;
+}
+
+.product__title {
+  font-weight: bold;
+  font-size: 36px;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  line-height: 1.16;
+}
+
+.product__text {
+  margin-bottom: 0.875rem;
+  font-size: 1rem;
+  padding-right: 29%;
+  color: #666666;
+}
+
+.product__info {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.product__info-col {
+  flex-basis: 9.375rem;
+}
+
+.product__info-up {
+  font-weight: normal;
+  font-size: 16px;
+  color: #666666;
+}
+
+.product__info-down {
+  font-weight: bold;
+  font-size: 18px;
+  color: #000000;
+}
+
+.product__value {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product__price {
+  flex-basis: 10.125rem;
+  font-weight: normal;
+  font-size: 36px;
+  color: #151515;
 }
 
 .reviews__display {
@@ -705,6 +895,7 @@ img {
   left: 6%;
   bottom: 0;
   transform: translateY(50%);
+  z-index: 2;
 }
 
 .order-section {
@@ -978,4 +1169,17 @@ img {
   text-decoration: none;
   width: 1.875rem;
   height: 1.875rem;
+}
+
+.hamburger-menu__link {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 42px;
+  right: 42px;
+}
+
+.hamburger-menu__ico {
+  width: 20px;
+  height: 20px;
 }

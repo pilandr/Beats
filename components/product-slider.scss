@@ -1,0 +1,27 @@
+.product-slider {
+  position: relative;
+}
+
+// .product-slider__arrows {
+//   position: absolute;
+//   width: 100%;
+//   display: flex;
+//   justify-content: space-between;
+//   top: 50%;
+//   left: 0;
+//   font-size: 40px;
+// }
+
+.product-slider__arrow--direction--prev {
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+
+.product-slider__arrow--direction--next {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translateX(-100%);
+}
+
