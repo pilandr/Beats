@@ -1,0 +1,20 @@
+.team {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.team__list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.team__item {
+  margin-bottom: rem(35px);
+  margin-right: rem(10px);
+  max-width: rem(220px);
+
+  &:last-child {
+    margin-right: 0;
+  }
+}

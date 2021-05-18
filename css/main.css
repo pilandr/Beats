@@ -586,6 +586,72 @@ img {
   z-index: 2;
 }
 
+.team {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.team__list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.team__item {
+  margin-bottom: 2.1875rem;
+  margin-right: 0.625rem;
+  max-width: 13.75rem;
+}
+.team__item:last-child {
+  margin-right: 0;
+}
+
+.human {
+  text-align: center;
+}
+
+.human__img-wraper {
+  margin-bottom: 1.25rem;
+  width: 13.75rem;
+  height: 18.125rem;
+}
+
+.human__name {
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 18px;
+  color: #292929;
+  line-height: 1.31;
+  margin-bottom: 0.6875rem;
+}
+.human__name::after {
+  content: url("../img/akk-arrow-down.png");
+  width: 0.5625rem;
+  height: 0.5625rem;
+  position: absolute;
+  bottom: 14px;
+  right: -14px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.human__profession-block-wrapper {
+  display: none;
+}
+
+.human__profession {
+  font-weight: normal;
+  font-size: 1rem;
+  color: #000000;
+}
+
+.human__profession-text {
+  font-weight: normal;
+  font-size: 16px;
+  color: #666666;
+}
+
 .product-section {
   background: #F8FAF9;
   position: relative;

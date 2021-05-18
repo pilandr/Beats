@@ -1,0 +1,53 @@
+.human {
+  text-align: center;
+}
+.human__img-wraper {
+  margin-bottom: rem(20px);
+  width: rem(220px);
+  height: rem(290px);
+}
+
+.human__name {
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 18px;
+  color: #292929;
+  line-height: 1.31;
+  margin-bottom: rem(11px);
+  
+
+  &::after {
+    content: url("../img/akk-arrow-down.png");
+    width: rem(9px);
+    height: rem(9px);
+    position: absolute;
+    bottom: 14px;
+    right: -14px;
+    display: inline-block;
+    cursor: pointer;
+
+  }
+}
+
+// .human__name--active.human__name::after {
+//   content: url("../img/akk-arrow-up.png");
+// }
+
+
+
+.human__profession-block-wrapper{
+  display: none;
+}
+
+.human__profession{
+  font-weight: normal;
+  font-size: rem(16px);
+  color: #000000;
+}
+
+.human__profession-text {
+  font-weight: normal;
+  font-size: 16px;
+  color: #666666;
+}
