@@ -245,12 +245,17 @@
       <div class="container">
         <h2 class="section__title">Команда</h2>
         <div class="team">
-          <ul class="team__list">
+          <ul class="team__list team__list--version--desktop">
             <li class="team__item human">
               <div class="human__img-wraper">
                 <img src="./img/human_1.jpg" alt="human_img" class="human__img">
               </div>
-              <div class="human__name">Борис Федорович</div>
+              <div class="human__name-wrap">
+                <div class="human__name">Борис Федорович</div>
+                <div class="human__arrow">
+                  <!-- <img src="./img/akk-arrow-down.png" alt="arrow img" class="human__arrow-img"> -->
+                </div>
+              </div>
               <div class="human__profession-block-wrapper">
                 <div class="human__profession-block">
                   <div class="human__profession">Главный технолог</div>
@@ -262,7 +267,12 @@
               <div class="human__img-wraper">
                 <img src="./img/human_2.jpg" alt="human_img" class="human__img">
               </div>
-              <div class="human__name">Алла Иванова</div>
+                <div class="human__name-wrap">
+                  <div class="human__name">Алла Иванова</div>
+                  <div class="human__arrow">
+                    <!-- <img src="./img/akk-arrow-down.png" alt="arrow img" class="human__arrow-img"> -->
+                  </div>
+                </div>
               <div class="human__profession-block-wrapper">
                 <div class="human__profession-block">
                   <div class="human__profession">Главный технолог</div>
@@ -274,7 +284,12 @@
               <div class="human__img-wraper">
                 <img src="./img/human_3.jpg" alt="human_img" class="human__img">
               </div>
-              <div class="human__name human__name--active">Кирилл Матросов</div>
+                <div class="human__name-wrap">
+                  <div class="human__name">Кирилл Матросов</div>
+                  <div class="human__arrow">
+                    <!-- <img src="./img/akk-arrow-down.png" alt="arrow img" class="human__arrow-img"> -->
+                  </div>
+                </div>
               <div class="human__profession-block-wrapper">
                 <div class="human__profession-block">
                   <div class="human__profession">Специалист по упаковке</div>
@@ -286,7 +301,12 @@
               <div class="human__img-wraper">
                 <img src="./img/human_4.jpg" alt="human_img" class="human__img">
               </div>
-              <div class="human__name">Мила Рыжкова</div>
+                <div class="human__name-wrap">
+                  <div class="human__name">Мила Рыжкова</div>
+                  <div class="human__arrow">
+                    <!-- <img src="./img/akk-arrow-down.png" alt="arrow img" class="human__arrow-img"> -->
+                  </div>
+                </div>
               <div class="human__profession-block-wrapper">
                 <div class="human__profession-block">
                   <div class="human__profession">PR, маркетинг</div>
@@ -303,36 +323,72 @@
       <div class="container">
         <h2 class="section__title">Отзывы</h2>
         <div class="reviews">
-          <div class="reviews__display">
-            <div class="reviews__display-inner">
-              <div class="reviews__avatar">
-                <img src="./img/avatar1.jpg" alt="avatar1 img" class="reviews__avatar-img">
-              </div>
-            
-              <article class="reviews__content">
-                <h3 class="reviews__title">Отличный звук</h3>
-                <div class="reviews__text">
-                  <p>
-                    Я ем малыми порциями, но часто. Это повышает мою продуктивность в разы. В течение дня сижу за компьютером и часто отходить в кафе или на кухню просто не могу себе позволить. А батончик – он всегда под рукой. Это приятно и удобно. 
-                  </p>
+          <ul class="reviews__list">
+            <li class="reviews__item reviews__item--active" data-linked-with="one">
+              <div class="reviews__display-inner">
+                <div class="reviews__avatar">
+                  <img src="./img/avatar1.jpg" alt="avatar1 img" class="reviews__avatar-img">
                 </div>
-                <div class="reviews__author">Билли Айлиш</div>
-              </article>
-            </div>
-          </div>
+              
+                <article class="reviews__content">
+                  <h3 class="reviews__title">Отличный звук</h3>
+                  <div class="reviews__text">
+                    <p>
+                      Я ем малыми порциями, но часто. Это повышает мою продуктивность в разы. В течение дня сижу за компьютером и часто отходить в кафе или на кухню просто не могу себе позволить. А батончик – он всегда под рукой. Это приятно и удобно. 
+                    </p>
+                  </div>
+                  <div class="reviews__author">Билли Айлиш</div>
+                </article>
+              </div>
+            </li>
+            <li class="reviews__item " data-linked-with="two">
+              <div class="reviews__display-inner">
+                <div class="reviews__avatar">
+                  <img src="./img/avatar2.jpg" alt="avatar2 img" class="reviews__avatar-img">
+                </div>
+              
+                <article class="reviews__content">
+                  <h3 class="reviews__title">Крутой дизайн</h3>
+                  <div class="reviews__text">
+                    <p>
+                      После тренировок всегда хочется быстро закинуться чем-то белковым, потому что до дома ещё нужно доехать. А кушать хочется. Протеиновые батончики всегда выручают в этом плане. Спасибо производителю за этот качественный и экологичный продукт.  
+                    </p>
+                  </div>
+                  <div class="reviews__author">Вадим Грачев</div>
+                </article>
+              </div>
+            </li>
+            <li class="reviews__item" data-linked-with="three">
+              <div class="reviews__display-inner">
+                <div class="reviews__avatar">
+                  <img src="./img/avatar3.jpg" alt="avatar1 img" class="reviews__avatar-img">
+                </div>
+              
+                <article class="reviews__content">
+                  <h3 class="reviews__title">На долго хватает заряда</h3>
+                  <div class="reviews__text">
+                    <p>
+                      Батончики понравились. На мой взгляд слегка завышена цена по сравнению с конкурентами, однако, как говорится – оно того стоит. Нравится носить с собой, нравится держать в руке. Ну и конечно же, кушать. Идеально утоляют голод, хоть и не надолго. Через час уже ем ещё один. Но это скорее плюс, чем минус. 
+                    </p>
+                  </div>
+                  <div class="reviews__author">Мария Орлова</div>
+                </article>
+              </div>
+            </li>
+          </ul>
           <ul class="reviews__switcher">
             <li class="reviews__switcher-item interactive-avatar interactive-avatar--active">
-              <a href="#" class="interactive-avatar__link ">
+              <a href="#" class="interactive-avatar__link" data-open="one">
                 <img src="./img/avatar1.jpg" alt="avatar1 img" class="interactive-avatar__img">
               </a>
             </li>
             <li class="reviews__switcher-item interactive-avatar">
-              <a href="#" class="interactive-avatar__link ">
+              <a href="#" class="interactive-avatar__link" data-open="two">
                 <img src="./img/avatar2.jpg" alt="avatar2 img" class="interactive-avatar__img">
               </a>
             </li>
             <li class="reviews__switcher-item interactive-avatar">
-              <a href="#" class="interactive-avatar__link ">
+              <a href="#" class="interactive-avatar__link " data-open="three">
                 <img src="./img/avatar3.jpg" alt="avatar3 img" class="interactive-avatar__img">
               </a>
             </li>
@@ -550,33 +606,10 @@
       return overlayElement;
     }
   </script> -->
-  <script>
-    const wrapperBlock = document.querySelector(".wrapper");
-    const hamburgerMenu = document.querySelector(".hamburger-menu");
-    const openHamburgerBtn = document.querySelector(".hamburger");
-
-    openHamburgerBtn.addEventListener('click', e => {
-      hamburgerMenu.style.display = 'block';
-      wrapperBlock.style.display = 'none';
-
-      const closeHamburgerMenu = hamburgerMenu.querySelector(".hamburger-menu__link");
-      closeHamburgerMenu.addEventListener('click', e => {
-        e.preventDefault();
-        wrapperBlock.style.display = 'block';
-        hamburgerMenu.style.display = 'none';
-      });
-
-      const clickOnMenuItem = hamburgerMenu.querySelector(".menu__list");
-      clickOnMenuItem.addEventListener("click", e => {
-        if (e.target.classList.contains("menu__link")){
-          hamburgerMenu.style.display = 'none';
-          wrapperBlock.style.display = 'block';
-        };
-      });
-    });
-
-    
-
-  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!-- <script type="text/javascript" src="./js/jquery-3.6.0.min.js"></script> -->
+  <script src="./js/hamburger-menu.js"></script>
+  <script src="./js/tabs.js"></script>
+  <script src="./js/accordion-vertical.js"></script>
 </body>
 </html>

@@ -616,28 +616,34 @@ img {
   height: 18.125rem;
 }
 
+.human__name-wrap {
+  cursor: pointer;
+}
+
+.human__name-wrap--active .human__arrow {
+  background: url("../img/akk-arrow-up.png") center center no-repeat;
+}
+
 .human__name {
-  position: relative;
   display: inline-block;
   font-weight: bold;
   font-size: 18px;
   color: #292929;
   line-height: 1.31;
   margin-bottom: 0.6875rem;
+  margin-right: 0.3125rem;
 }
-.human__name::after {
-  content: url("../img/akk-arrow-down.png");
+
+.human__arrow {
   width: 0.5625rem;
   height: 0.5625rem;
-  position: absolute;
-  bottom: 14px;
-  right: -14px;
   display: inline-block;
-  cursor: pointer;
+  background: url("../img/akk-arrow-down.png") center center no-repeat;
 }
 
 .human__profession-block-wrapper {
-  display: none;
+  height: 0;
+  overflow: hidden;
 }
 
 .human__profession {
@@ -923,20 +929,15 @@ img {
   }
 }
 
-.reviews__display {
-  background: #F8FAF9;
-  padding: 2.625rem 3.125rem 2.625rem 2.625rem;
-  overflow: hidden;
+.reviews__list {
   position: relative;
+  min-height: 21.75rem;
   margin: 0 4.75rem 1rem 4.75rem;
+  padding: 2.625rem 3.125rem 2.625rem 2.625rem;
+  background: #F8FAF9;
+  z-index: -1;
 }
-@media screen and (max-width: 768px) {
-  .reviews__display {
-    padding: 2.625rem 0 0 0;
-    margin: 0 0 4.375rem 0;
-  }
-}
-.reviews__display::before {
+.reviews__list::before {
   content: "";
   display: block;
   width: 5.1875rem;
@@ -947,6 +948,28 @@ img {
   left: 50%;
   transform: translate(-50%);
   top: -3.625rem;
+}
+
+.reviews__item {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+}
+@media screen and (max-width: 768px) {
+  .reviews__item {
+    padding: 2.625rem 0 0 0;
+    margin: 0 0 4.375rem 0;
+  }
+}
+
+.reviews__item--active {
+  position: static;
+  opacity: 1;
+  pointer-events: unset;
 }
 
 .reviews__display-inner {
@@ -997,7 +1020,7 @@ img {
 
 .reviews__text {
   margin-bottom: 0.875rem;
-  padding-right: 12.1875rem;
+  padding-right: 6.875rem;
   color: #666666;
   line-height: 1.3;
 }
