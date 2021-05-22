@@ -1,5 +1,15 @@
 .products {
   display: flex;
+  flex-wrap: nowrap;
+  // overflow: hidden;
+  position: relative;
+  left: 0;
+  transition: left .5s;
+  
 }
 .products__item {
+  min-width: 100%;
+  // position: relative;
+  // left: 0;
+  
 }

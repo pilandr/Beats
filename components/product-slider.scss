@@ -1,10 +1,12 @@
 .product-slider {
   position: relative;
+  overflow: hidden;
 }
 
 .product-slider__arrow {
   width: rem(24px);
   height: rem(50px);
+  z-index: 1;
 }
 
 

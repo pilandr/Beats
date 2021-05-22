@@ -693,11 +693,13 @@ img {
 
 .product-slider {
   position: relative;
+  overflow: hidden;
 }
 
 .product-slider__arrow {
   width: 1.5rem;
   height: 3.125rem;
+  z-index: 1;
 }
 
 .product-slider__arrow--direction--prev {
@@ -739,6 +741,14 @@ img {
 
 .products {
   display: flex;
+  flex-wrap: nowrap;
+  position: relative;
+  left: 0;
+  transition: left 0.5s;
+}
+
+.products__item {
+  min-width: 100%;
 }
 
 .product__container {
