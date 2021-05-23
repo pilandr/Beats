@@ -1201,9 +1201,13 @@ img {
   .form__input {
     padding: 0.5rem 0.625rem;
   }
-  .form__input--textarea {
+  .form__input-textarea {
     height: 5.5rem;
   }
+}
+
+.form__input-error {
+  border-color: #E01F3D;
 }
 
 .form__controls-container {
@@ -1300,6 +1304,34 @@ img {
 
 .radio__title {
   margin-left: 0.5625rem;
+}
+
+.modal {
+  display: block;
+}
+.modal.error-modal .modal__content {
+  color: red;
+}
+
+.fancybox-content {
+  padding: 0 !important;
+}
+
+.fancybox-button {
+  display: none;
+}
+
+.modal__container {
+  background: #FFFFFF;
+  padding: 2.9375rem 4.0625rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal__content {
+  margin-bottom: 2.1875rem;
+  color: #000;
 }
 
 .fixed-menu {

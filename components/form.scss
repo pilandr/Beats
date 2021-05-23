@@ -80,10 +80,14 @@
   @include tablets {
     padding: rem(8px) rem(10px);
 
-    &--textarea {
+    &-textarea {
       height: rem(88px);
     }
   }
+}
+
+.form__input-error {
+  border-color: #E01F3D;
 }
 
 .form__controls-container {
