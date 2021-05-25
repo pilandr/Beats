@@ -23,6 +23,11 @@
     top: rem(-58px);
     // z-index: -1;
   }
+
+  @include phones {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .reviews__item {

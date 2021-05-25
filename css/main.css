@@ -408,6 +408,9 @@ img {
   text-align: center;
   text-transform: uppercase;
 }
+.section__title--align--left {
+  text-align: left;
+}
 @media screen and (max-width: 480px) {
   .section__title {
     font-size: 2.5rem;
@@ -677,6 +680,90 @@ img {
   font-weight: normal;
   font-size: 16px;
   color: #666666;
+}
+
+.colors-section {
+  background-image: url("../img/colors-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+  position: relative;
+  display: block;
+  padding-top: 7.1875rem;
+}
+
+.colors {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+.colors__item {
+  display: flex;
+}
+
+.color {
+  flex: 1 1 auto;
+  display: flex;
+}
+.color--color--gray .color__header {
+  background: #999999;
+}
+.color--color--black .color__header {
+  background: #151515;
+}
+.color--color--red .color__header {
+  background: #E01F3C;
+}
+.color__header {
+  display: block;
+  padding: 2.125rem 1.625rem 2.125rem 1.625rem;
+  font-size: 2.25rem;
+  color: #fff;
+  text-orientation: mixed;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+.color__header:hover {
+  color: #ccc;
+}
+@media screen and (max-width: 768px) {
+  .color__header {
+    padding: 2.125rem 0 0 0;
+  }
+}
+.color__title {
+  margin: 0;
+  padding: 0;
+}
+.color__body {
+  max-width: 0;
+  overflow: hidden;
+  display: flex;
+  flex: 0 0 auto;
+  transition: all 0.5s;
+}
+.color__content {
+  width: 100%;
+  padding: 1.9375rem 3.3125rem 1.9375rem 2.375rem;
+  background: rgba(51, 53, 55, 0.9);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  color: #FFFFFF;
+}
+@media screen and (max-width: 768px) {
+  .color__content {
+    padding-left: 0.625rem;
+    padding-right: 4.375rem;
+  }
+}
+
+.color--active .color__body {
+  visibility: visible;
+  max-width: 32.75rem;
 }
 
 .product-section {
@@ -979,6 +1066,12 @@ img {
   left: 50%;
   transform: translate(-50%);
   top: -3.625rem;
+}
+@media screen and (max-width: 480px) {
+  .reviews__list {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .reviews__item {
