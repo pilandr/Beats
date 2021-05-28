@@ -1,13 +1,8 @@
 .colors-section {
-  background-image: url("../img/colors-bg.jpg");
-  background-position: center;
-  background-size: cover;
-  min-height: 100vh;
+  background: url("../img/colors-bg.jpg") center center/cover no-repeat;
+  // min-height: 100vh;
   position: relative;
   display: block;
   padding-top: rem(115px);
+  color: #fff;
 }
-
-// .colors-section__title {
-//   padding-top: rem(115px);
-// }

@@ -5,12 +5,20 @@
   z-index: $z-fixed-menu;
 }
 
-.fixed-menu__list {
+.fixed-menu__list--color--light {
+  .fixed-menu__link {
+    &::before {
+      background: rgba(200,200,200);
+    }
+  }
 }
+
+
+
 .fixed-menu__item {
   margin-bottom: rem(5px);
 
-  &--active {
+  &:hover, &--active {
     .fixed-menu__link {
       border-color: #E01F3D;
 
@@ -19,6 +27,16 @@
       }
     }
   }
+
+  // &:hover {
+  //   .fixed-menu__link {
+  //     border-color: #E01F3D;
+
+  //     &::before {
+  //       background: #E01F3D;
+  //     }
+  //   }
+  // }
 }
 .fixed-menu__link {
   width: rem(16px);
