@@ -1,88 +1,118 @@
 const sections = $("section");
 const display = $(".maincontent");
+const sideMenu = $(".fixed-menu__list")
+const sideMenuItems = sideMenu.find(".fixed-menu__item");
+
+//http://hgoebl.github.io/mobile-detect.js/
+const mobileDetect = new MobileDetect(window.navigator.userAgent);
+const isMobile = mobileDetect.mobile();
+
 let inScroll = false;
 sections.first().addClass("active");
 
+const countSectionPosition = sectionEq => {
+  const position = sectionEq * -100;
+  if (isNaN(position)) {
+    console.error("передано неверное значение в countSectionPosition")
+    return 0
+  } 
+  return position;
+}
+
+
+const changeMenuTheme = sectionEq => {
+  const currentSection = sections.eq(sectionEq);
+  menuTheme = currentSection.attr("data-sidemenu-theme");
+  const activeClass = "fixed-menu__list--color--light"
+
+  if (menuTheme == "light") {
+    sideMenu.addClass(activeClass);
+  } else {
+    sideMenu.removeClass(activeClass);
+  }
+}
+
+
+const resetActiveClassForItem = (items, itemEq, activeClass) => {
+  items.eq(itemEq).addClass(activeClass).siblings().removeClass(activeClass);
+}
+
+
 const performTransition = sectionEq => {
 
-  if (inScroll == false) {
-    inScroll = true;
-    const position = sectionEq * -100;
+  if (inScroll) return;
 
+    const transitionOver = 1000;
+    const mouseInertiaOver = 300;
+
+    inScroll = true;
+    const position = countSectionPosition(sectionEq);
+
+    changeMenuTheme(sectionEq);
+    
     display.css ({
       transform: `translateY(${position}%)`
     });
 
-    const currentSection = sections.eq(sectionEq);
-      menuTheme = currentSection.attr("data-sidemenu-theme");
-      const sideMenu = $(".fixed-menu__list")
-
-      if (menuTheme == "light") {
-        sideMenu.addClass("fixed-menu__list--color--light");
-      } else {
-        sideMenu.removeClass("fixed-menu__list--color--light");
-      }
-
-      
-
-    sections.eq(sectionEq).addClass("active").siblings().removeClass("active");
+    resetActiveClassForItem(sections,sectionEq,"active");
     
     setTimeout(() => {
       inScroll = false;
+      resetActiveClassForItem(sideMenuItems,sectionEq,"fixed-menu__item--active");
 
-      sideMenu
-        .find(".fixed-menu__item")
-        .eq(sectionEq)
-        .addClass("fixed-menu__item--active")
-        .siblings()
-        .removeClass("fixed-menu__item--active");
-    }, 1300);
-  }
-  
+    }, transitionOver + mouseInertiaOver);
 }
 
-const scrollViewport = direction => {
+const Viewportscroller = () => {
 const activeSection = sections.filter(".active");
 const nextSection = activeSection.next();
 const prevSection = activeSection.prev();
 
-
-  if (direction == "next" && nextSection.length) {
-    performTransition(nextSection.index());
-  }
-
-  if (direction == "prev" && prevSection.length) {
-    performTransition(prevSection.index());
+  return {
+    next() {
+      if (nextSection.length) {
+        performTransition(nextSection.index());
+      }
+    },
+    prev() {
+      if (prevSection.length) {
+        performTransition(prevSection.index());
+      }
+    }
   }
 }
 
 $(window).on("wheel", e => {
   const deltaY = e.originalEvent.deltaY;
+  const scroller = Viewportscroller();
 
   if (deltaY > 0) {
-    scrollViewport("next");
+    scroller.next();
   }
   if (deltaY < 0) {
-    scrollViewport("prev");
+    scroller.prev();
   }
 });
 
 $(window).on("keydown", e => {
-
   const tagname = e.target.tagName.toLowerCase();
+  const userTypingInInputs = tagname == "input" || tagname == "textarea";
+  const scroller = Viewportscroller();
 
-  if (tagname != "input" && tagname != "textarea") {
+  if (userTypingInInputs) return;
     switch (e.keyCode) {
       case 38:
-        scrollViewport("prev");
+        scroller.prev();
         break;
       
       case 40:
-        scrollViewport("next");
+        scroller.next();
         break;
     }
-  }
 });
+
+$(".wrapper").on("touchmove", e => e.preventDefault());
+
 
 $("[data-scroll-to]").on("click", e => {
   e.preventDefault();
@@ -94,3 +124,17 @@ $("[data-scroll-to]").on("click", e => {
   performTransition(reqSection.index());
 
 });
+
+if (isMobile) {
+  //https://github.com/mattbryson/TouchSwipe-Jquery-Plugin
+  $("body").swipe( {
+    //Generic swipe handler for all directions
+    swipe:function(event, direction) {
+      const scroller = Viewportscroller();
+      let scrolDirection = "";
+      if (direction == "up") scrolDirection = "next";
+      if (direction == "down") scrolDirection = "prev";
+      scroller[scrolDirection]();
+    }
+  });
+}
