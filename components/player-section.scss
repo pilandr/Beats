@@ -14,6 +14,16 @@
 .player-section__container {
 
     width: 94.5%;
-    max-width: rem(660px);
+    max-width: 660px;
     margin: 0 auto;
+    // height: 390px;
+
+    @include tablets {
+      width: 83.5%;
+    }
+  
+    @include phones {
+      width: 90%;
+    }
+
 }

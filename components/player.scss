@@ -2,7 +2,7 @@
   position: relative;
   display: block;
   width: 100%;
-  height: 100%;
+  // height: 100%;
 
   &.active .player__splash {
     display: none;
@@ -10,21 +10,6 @@
 
   &.paused {
     .player__start {
-    //   width: 11px;
-    //   height: 16px;
-    //   border: none;
-
-      // &::after,
-      // &::before {
-      //   content: "";
-      //   display: block;
-      //   position: absolute;
-      //   width: 5px;
-      //   top: 0;
-      //   bottom: 0;
-      //   background: #151515;
-      // }
-
       &:after {
         display: block;
       }
@@ -35,11 +20,6 @@
     }
   }
 }
-
-.player__wrapper {
-
-}
-
 
 .player__splash {
   position: absolute;
@@ -53,8 +33,8 @@
 
     &:before {
       content: "";
-      width: (49px);
-      height: rem(70px);
+      width: 49px;
+      height: 70px;
       position: absolute;
       display: block;
       background: url("../img/play-ico.png");
@@ -64,12 +44,22 @@
     }
 }
 
+#yt-player {
+  height: 390px;
+  @include tablets {
+    height: 352px;
+  }
 
+  @include phones {
+    height: 233px;
+  }
+
+}
 
 .player__controls {
 
   position: absolute;
-  height: rem(35px);
+  height: 35px;
   bottom: 0;
   left: 0;
   right: 0;
@@ -81,46 +71,49 @@
 }
 
 .player__start {
-  width: 11px;
-  height: 16px;
+  width: rem(11px);
+  height: rem(16px);
   background: #151515;
   border: none;
   position: relative;
+  margin-right: 10px;
 
   &::before {
     content: "";
     position: absolute;
     display: block;
     border: none;
-    width: 11px;
-    height: 16px;
+    width: rem(11px);
+    height: rem(16px);
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    background: #151515 url("../img/play.png") center center no-repeat;
+    background: #151515 url("../img/play.svg") center center no-repeat;
   }
    &::after {
     content: "";
     position: absolute;
     display: none;
     border: none;
-    width: 11px;
-    height: 16px;
+    width: rem(13px);
+    height: rem(13px);
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    background: #151515 url("../img//play.png") center center no-repeat;
+    // background: #151515 url("../img//play.svg") center center no-repeat;
+    background: #fff ;
   }
 }
 
 .player__playback {
-  width: rem(440px);
+  // width: rem(440px);
+  width: 66%;
   height: rem(16px);
   position: relative;
 
   &::before {
     content: "";
-    height: 4px;
+    height: rem(4px);
     position: absolute;
     top: 50%;
     left: 0;
@@ -131,7 +124,7 @@
   }
 
   &-active {
-    height: 4px;
+    height: rem(4px);
     position: absolute;
     top: 50%;
     left: 0;
@@ -144,25 +137,37 @@
     background: #E01F3D;
     border-radius: 50%;
     border: none;
-    width: 15px;
-    height: 15px;
+    width: rem(15px);
+    height: rem(15px);
     padding: 0;
     position: absolute;
     top: 50%;
     transform: translate(-50%,-50%);
     left: 0;
     cursor: pointer;
+
+    @include tablets {
+      width: rem(13px);
+      height: rem(13px);
+    }
+  
+    @include phones {
+      width: rem(9px);
+      height: rem(9px);
+    }
   }
 
 }
 
 .player__volume-ico {
-  width: 13px;
-  height: 16px;
+  width: rem(13px);
+  height: rem(16px);
   background: #151515;
   border: none;
   // position: relative;
   background: #151515 url("../img/volume-ico.png") center center no-repeat;
+  margin: 0 5px;
+  position: relative;
 
 
   // &::before {
@@ -193,18 +198,31 @@
 
 
 .player__volume-ico--nosound.player__volume-ico {
-  background: #151515 url("../img/volume-ico.png") center center no-repeat;
+  // background: #151515 url("../img/volume-ico.png") center center no-repeat;
+  &::before{
+    content: "";
+    position: absolute;
+    display: block;
+    border: none;
+    width: 3px;
+    height: 16px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(-45deg);
+    background: #E01F3D;
+  }
 }
 
 
 .player__volume {
-  width: rem(60px);
+  // width: rem(60px);
+  width: 9%;
   height: rem(16px);
   position: relative;
 
   &::before {
     content: "";
-    height: 5px;
+    height: rem(5px);
     position: absolute;
     top: 50%;
     left: 0;
@@ -215,7 +233,7 @@
   }
 
   &-active {
-    height: 5px;
+    height: rem(5px);
     position: absolute;
     top: 50%;
     left: 0;
@@ -231,13 +249,23 @@
     background: #E01F3D;
     border-radius: 50%;
     border: none;
-    width: 15px;
-    height: 15px;
+    width: rem(12px);
+    height: rem(12px);
     padding: 0;
     position: absolute;
     top: 50%;
     transform: translate(-50%,-50%);
     left: 0;
     cursor: pointer;
+
+    @include tablets {
+      width: rem(10px);
+      height: rem(10px);
+    }
+  
+    @include phones {
+      width: rem(7px);
+      height: rem(7px);
+    }
   }
 }
