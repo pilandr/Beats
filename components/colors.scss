@@ -5,10 +5,30 @@
   bottom: 0;
   display: flex;
 
+  @include phones {
+    left: 0;
+    justify-content: flex-end;
+  }
+
   &__item {
     display: flex;
   }
 
+}
+
+.colors__item.active {
+  @include phones {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+
+    .colors__content {
+    flex: 1;
+    }
+  }
 }
 
 .colors__header {
@@ -44,11 +64,12 @@
   width: 0;
   transition: width .7s;
   
-
   &-inner {
     padding: rem(31px) rem(53px) rem(31px) rem(38px);
   }
 }
+
+
 
 
 

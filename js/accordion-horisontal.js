@@ -52,9 +52,13 @@
     const textPaddingLeft = parseInt(textContainer.css("padding-left"));
     const textPaddingRight = parseInt(textContainer.css("padding-right"));
 
-    const isMobile = window.matchMedia("(max-width: 768px)").matches;
+    const isTablet = window.matchMedia("(max-width: 768px)").matches;
+    const isMobile = window.matchMedia("(max-width: 480px)").matches;
 
-    if (isMobile) {
+
+     if (isMobile) {
+      reqItemWidth = screenWidth - items.width();
+    } else if (isTablet) {
       reqItemWidth = screenWidth - itemsWidth;
     } else {
       reqItemWidth = 524;
