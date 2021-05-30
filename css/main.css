@@ -1218,6 +1218,13 @@ img {
 .player.active .player__splash {
   display: none;
 }
+.player.paused .player__start:after {
+  display: block;
+}
+.player.paused .player__start::before {
+  display: none;
+}
+
 .player__splash {
   position: absolute;
   top: 0;
@@ -1281,7 +1288,7 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: #151515 url("../img/play.png") center center no-repeat;
+  background: #151515 url("../img//play.png") center center no-repeat;
 }
 
 .player__playback {
@@ -1300,8 +1307,69 @@ img {
   display: block;
   transform: translateY(-58%);
 }
+.player__playback-active {
+  height: 4px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 0;
+  background: #E01F3D;
+  transform: translateY(-58%);
+}
 .player__playback-button {
+  background: #E01F3D;
+  border-radius: 50%;
+  border: none;
+  width: 15px;
+  height: 15px;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 0;
+  cursor: pointer;
+}
+
+.player__volume-ico {
+  width: 13px;
+  height: 16px;
+  background: #151515;
+  border: none;
+  background: #151515 url("../img/volume-ico.png") center center no-repeat;
+}
+
+.player__volume-ico--nosound.player__volume-ico {
+  background: #151515 url("../img/volume-ico.png") center center no-repeat;
+}
+
+.player__volume {
+  width: 3.75rem;
+  height: 1rem;
+  position: relative;
+}
+.player__volume::before {
+  content: "";
+  height: 5px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
   background: #333333;
+  display: block;
+  transform: translateY(-58%);
+}
+.player__volume-active {
+  height: 5px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 0;
+  display: block;
+  transform: translateY(-58%);
+  background: #E01F3D;
+}
+.player__volume-button {
+  background: #E01F3D;
   border-radius: 50%;
   border: none;
   width: 15px;
@@ -1570,9 +1638,9 @@ img {
   transform: translate(-50%, -50%);
 }
 
-.map {
-  position: relative;
-  overflow: hidden;
+#map {
+  width: 100%;
+  height: 100%;
 }
 
 .footer {

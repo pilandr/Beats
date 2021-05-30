@@ -1,4 +1,5 @@
 let player;
+let volumePlayer;
 const playerContainer = $(".player");
 
 let eventsInit = () => {
@@ -23,9 +24,53 @@ let eventsInit = () => {
     $(".player__playback-button").css({
       left: `${newButtonPositionPercent}%`
     });
+
+    bar.find(".player__playback-active").css({
+      width: `${newButtonPositionPercent}%`
+    });
+
     player.seekTo(newPlayBackPositionSec);
   });
 };
+
+
+
+  const newPositionVolume = (percents) => {
+    $(".player__volume-button").css({
+      left: `${percents}%`
+    });
+
+    $(".player__volume-active").css({
+      width: `${percents}%`
+    });
+
+    player.setVolume(percents);
+  }
+
+
+  $(".player__volume").on("click", e => {
+    const bar = $(e.currentTarget);
+    const clickedPositionOnBar = e.originalEvent.layerX;
+    const newButtonPositionPercent = (clickedPositionOnBar / bar.width()) * 100;
+    newPositionVolume (newButtonPositionPercent);
+    volumePlayer = newButtonPositionPercent;
+  });
+
+  $(".player__volume-ico").on("click", e => {
+    const bar = $(e.currentTarget);
+    const isNoSound = bar.hasClass("player__volume-ico--nosound");
+
+    if (isNoSound) {
+      bar.removeClass("player__volume-ico--nosound");
+      newPositionVolume(volumePlayer);
+    } else {
+      bar.addClass("player__volume-ico--nosound");
+      newPositionVolume(0);
+    }
+  });
+
+
+
 
 $(".player__splash").on("click", e => {
   player.playVideo();
@@ -46,8 +91,10 @@ const formatTime = timeSec => {
 const onPlayerReady = () => {
   let interval;
   const durationSec = player.getDuration();
+  volumePlayer = player.getVolume();
+  newPositionVolume(volumePlayer);
 
-  $(".player__duration-estimate").text(formatTime(durationSec));
+  // $(".player__duration-estimate").text(formatTime(durationSec));
 
   if (typeof interval == "undefined") {
     clearInterval(interval);
@@ -61,7 +108,11 @@ const onPlayerReady = () => {
       left: `${completedPersent}%`
     });
 
-    $(".player__duration-completed").text(formatTime(completedSec));
+    $(".player__playback-active").css({
+      width: `${completedPersent}%`
+    });
+
+    // $(".player__duration-completed").text(formatTime(completedSec));
   }, 1000);
 }
 

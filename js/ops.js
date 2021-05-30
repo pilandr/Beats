@@ -86,10 +86,14 @@ $(window).on("wheel", e => {
   const deltaY = e.originalEvent.deltaY;
   const scroller = Viewportscroller();
 
+  const activeSection = sections.filter(".active");
+  
+
   if (deltaY > 0) {
     scroller.next();
   }
   if (deltaY < 0) {
+    // if (activeSection.index() == sections.last().index()) return;
     scroller.prev();
   }
 });
