@@ -22,7 +22,7 @@
                 <li class="menu__item"><a href="#" data-scroll-to="team" class="menu__link">Команда</a></li>
                 <li class="menu__item"><a href="#" data-scroll-to="colors" class="menu__link">Цвета</a></li>
                 <li class="menu__item"><a href="#" data-scroll-to="review" class="menu__link">Отзывы</a></li>
-                <li class="menu__item"><a href="#" data-scroll-to="order" class="menu__link">Как мы работаем</a></li>
+                <li class="menu__item"><a href="#" data-scroll-to="work" class="menu__link">Как мы работаем</a></li>
                 <li class="menu__item"><a href="#" data-scroll-to="map" class="menu__link">Контакты </a></li>
               </ul>
               </nav>
@@ -595,16 +595,26 @@
           </div>
         </div>
       </section>
-      <section class="section player-section">
+      <section data-sidemenu-theme="dark" data-section-id="work" class="section player-section">
         <div class="container">
           <h2 class="section__title">как мы работаем</h2>
           <div class="player-section__container">
             <div class="player">
               <div class="player__wrapper">
-                <div id="ut-player" class="player__elem"></div>
+                <div id="yt-player" class="player__elem"></div>
                 <div class="player__splash"></div>
               </div>
-              <div class="player__controls"></div>
+              <div class="player__controls">
+                <button class="player__start"></button>
+                 <div class="player__playback">
+                   <button class="player__playback-button"></button>
+                 </div>
+                 <button class="player__volume"></button>
+                 <div class="player__duration">
+                   <span class="player__duration-completed">0:00</span> :
+                   <span class="player__duration-estimate">0:00</span>
+                 </div>
+              </div>
             </div>
           </div>
         </div>
@@ -748,9 +758,9 @@
       <li class="fixed-menu__item"><a href="#" data-scroll-to="team" class="fixed-menu__link"></a></li>
       <li class="fixed-menu__item"><a href="#" data-scroll-to="colors" class="fixed-menu__link"></a></li>
       <li class="fixed-menu__item"><a href="#" data-scroll-to="review" class="fixed-menu__link"></a></li>
+      <li class="fixed-menu__item"><a href="#" data-scroll-to="work" class="fixed-menu__link"></a></li>
       <li class="fixed-menu__item"><a href="#" data-scroll-to="order" class="fixed-menu__link"></a></li>
       <li class="fixed-menu__item"><a href="#" data-scroll-to="map" class="fixed-menu__link"></a></li>
-      <!-- <li class="fixed-menu__item"><a href="#" class="fixed-menu__link"></a></li> -->
     </ul>
   </nav>
 
@@ -845,6 +855,7 @@
   <script src="./js/tabs.js"></script>
   <script src="./js/accordion-vertical.js"></script>
   <script src="./js/accordion-horisontal.js"></script>
+  <script src="./js/player.js"></script>
   <script src="./js/modal.js"></script>
 </body>
 </html>

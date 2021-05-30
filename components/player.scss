@@ -1,0 +1,146 @@
+.player {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  &.active .player__splash {
+    display: none;
+  }
+
+  &.paused {
+    // .player__start {
+    //   width: 11px;
+    //   height: 16px;
+    //   border: none;
+
+      // &::after,
+      // &::before {
+      //   content: "";
+      //   display: block;
+      //   position: absolute;
+      //   width: 5px;
+      //   top: 0;
+      //   bottom: 0;
+      //   background: #151515;
+      // }
+
+      // &:after {
+      //   right: 0;
+      // }
+
+      // &::before {
+      //   left: 0;
+      // }
+    // }
+  }
+}
+
+.player__wrapper {
+
+}
+
+
+.player__splash {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url("/img/splash-screen.jpg") center center/cover no-repeat;
+  cursor: pointer;
+
+
+    &:before {
+      content: "";
+      width: (49px);
+      height: rem(70px);
+      position: absolute;
+      display: block;
+      background: url("../img/play-ico.png");
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+    }
+}
+
+
+
+.player__controls {
+
+  position: absolute;
+  height: rem(35px);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #151515;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 rem(20px) 0 rem(17px);
+}
+
+.player__start {
+  width: 11px;
+  height: 16px;
+  background: #151515;
+  border: none;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    border: none;
+    width: 11px;
+    height: 16px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #151515 url("../img/play.png") center center no-repeat;
+  }
+   &::after {
+    content: "";
+    position: absolute;
+    display: none;
+    border: none;
+    width: 11px;
+    height: 16px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #151515 url("../img/play.png") center center no-repeat;
+  }
+}
+
+.player__playback {
+  width: rem(440px);
+  height: rem(16px);
+  position: relative;
+
+  &::before {
+    content: "";
+    height: 4px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    background: #333333;
+    display: block;
+    transform: translateY(-58%);
+  }
+
+  &-button {
+    background: #333333;
+    border-radius: 50%;
+    border: none;
+    width: 15px;
+    height: 15px;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    left: 0;
+    cursor: pointer;
+  }
+}
