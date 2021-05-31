@@ -504,6 +504,7 @@ img {
 
 .benefit {
   text-align: center;
+  color: red;
 }
 @media screen and (max-width: 480px) {
   .benefit {
